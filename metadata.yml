@@ -3,6 +3,8 @@ license: Creative Commons Attribution
 license_url: https://creativecommons.org/licenses/by/3.0/us/
 source: GreenInfo Network
 source_url: https://www.calands.org/cpad/
+about: simonw/calands-datasette
+about_url: https://github.com/simonw/calands-datasette
 description_html: |-
     <h2>Search parks</h2>
     <form action="/calands/superunits_with_maps" method="GET">
