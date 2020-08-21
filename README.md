@@ -8,6 +8,7 @@ The site is built and published by [this GitHub Actions workflow](https://github
 
 - [Datasette](https://datasette.io/)
 - [datasette-leaflet-geojson](https://github.com/simonw/datasette-leaflet-geojson)
+- [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/index)
 - [sqlite-utils](https://github.com/simonw/sqlite-utils)
 - [shapefile-to-sqlite](https://github.com/simonw/shapefile-to-sqlite)
 - [Google Cloud Run](https://cloud.google.com/run)
