@@ -21,7 +21,7 @@ databases:
                 - MNG_AGENCY
                 - MNG_AG_TYP
             units_with_maps:
-                fts_table: CPAD_2020a_SuperUnits_fts
+                fts_table: CPAD_2020a_Units_fts
                 fts_pk: id
                 facets:
                 - ACCESS_TYP
