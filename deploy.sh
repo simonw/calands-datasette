@@ -3,7 +3,7 @@ datasette publish cloudrun calands.db \
   --service calands \
   --metadata metadata.yml \
   --memory 2Gi \
-  --install datasette-leaflet-geojson>=0.5 \
+  --install datasette-leaflet-geojson>=0.6 \
   --install datasette-graphql \
   --install datasette-copyable \
   --extra-options "--config default_page_size:20"
