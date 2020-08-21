@@ -1,0 +1,29 @@
+title: California Protected Areas Database (CPAD 2020a)
+license: Creative Commons Attribution
+license_url: https://creativecommons.org/licenses/by/3.0/us/
+source: GreenInfo Network
+source_url: https://www.calands.org/cpad/
+description_html: |-
+    <h2>Search parks</h2>
+    <form action="/calands/superunits_with_maps" method="GET">
+    <p>
+        <input name="_search" type="search" placeholder="Search parks"> <input type="submit" value="Search">
+    </p>
+    </form>
+databases:
+    calands:
+        tables:
+            superunits_with_maps:
+                fts_table: CPAD_2020a_SuperUnits_fts
+                fts_pk: id
+                facets:
+                - ACCESS_TYP
+                - MNG_AGENCY
+                - MNG_AG_TYP
+            units_with_maps:
+                fts_table: CPAD_2020a_SuperUnits_fts
+                fts_pk: id
+                facets:
+                - ACCESS_TYP
+                - MNG_AGENCY
+                - MNG_AG_TYP

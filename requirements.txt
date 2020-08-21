@@ -1,0 +1,4 @@
+sqlite-utils>=2.16
+shapefile-to-sqlite
+datasette
+conditional-get
