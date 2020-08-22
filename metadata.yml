@@ -29,3 +29,4 @@ databases:
                 - ACCESS_TYP
                 - MNG_AGENCY
                 - MNG_AG_TYP
+                - DES_TP
