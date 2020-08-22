@@ -1,5 +1,5 @@
-shapefile-to-sqlite calands.db cpad/CPAD_2020a/CPAD_2020a_Units.shp --spatial-index
-shapefile-to-sqlite calands.db cpad/CPAD_2020a/CPAD_2020a_SuperUnits.shp --spatial-index
+shapefile-to-sqlite calands.db cpad/CPAD_2020a/CPAD_2020a_Units.shp --spatialite
+shapefile-to-sqlite calands.db cpad/CPAD_2020a/CPAD_2020a_SuperUnits.shp --spatialite
 
 sqlite-utils create-view calands.db units_with_maps_view 'select
   id,
