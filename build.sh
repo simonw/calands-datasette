@@ -1,5 +1,5 @@
-shapefile-to-sqlite calands.db cpad/CPAD_2020a/CPAD_2020a_Units.shp --spatialite
-shapefile-to-sqlite calands.db cpad/CPAD_2020a/CPAD_2020a_SuperUnits.shp --spatialite
+shapefile-to-sqlite calands.db cpad/CPAD_2020a/CPAD_2020a_Units.shp --spatial-index
+shapefile-to-sqlite calands.db cpad/CPAD_2020a/CPAD_2020a_SuperUnits.shp --spatial-index
 
 sqlite-utils create-view calands.db units_with_maps_view 'select
   id,
@@ -56,10 +56,10 @@ SPATIALITE=$(python -c 'print(__import__("sqlite_utils").utils.find_spatialite()
 # Create those as materialized views for better facet performance
 sqlite-utils calands.db \
   'create table superunits_with_maps as select * from superunits_with_maps_view' \
-  --load-extension=SPATIALITE
+  --load-extension=$SPATIALITE
 sqlite-utils calands.db \
   'create table units_with_maps as select * from units_with_maps_view' \
-  --load-extension=SPATIALITE
+  --load-extension=$SPATIALITE
 
 # Set up full-text search
 sqlite-utils enable-fts calands.db CPAD_2020a_Units UNIT_NAME
