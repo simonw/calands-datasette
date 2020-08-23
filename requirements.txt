@@ -1,5 +1,5 @@
 sqlite-utils>=2.16
-shapefile-to-sqlite>=0.3
+shapefile-to-sqlite>=0.4.1
 datasette
 conditional-get
 datasette-leaflet-geojson>=0.5
