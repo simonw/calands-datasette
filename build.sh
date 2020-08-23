@@ -100,3 +100,6 @@ sqlite-utils index-foreign-keys calands.db
 # Set up full-text search
 sqlite-utils enable-fts calands.db CPAD_2020a_Units UNIT_NAME
 sqlite-utils enable-fts calands.db CPAD_2020a_SuperUnits PARK_NAME
+
+# Optimize all FTS tables and then VACUUM
+sqlite-utils optimize calands.db
