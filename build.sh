@@ -94,6 +94,9 @@ sqlite-utils add-foreign-key calands.db superunits_with_maps MNG_AG_LEV
 sqlite-utils add-foreign-key calands.db superunits_with_maps MNG_AG_TYP
 sqlite-utils add-foreign-key calands.db superunits_with_maps LAYER
 
+# Add an index to any column that's a foreign key
+sqlite-utils index-foreign-keys calands.db
+
 # Set up full-text search
 sqlite-utils enable-fts calands.db CPAD_2020a_Units UNIT_NAME
 sqlite-utils enable-fts calands.db CPAD_2020a_SuperUnits PARK_NAME
