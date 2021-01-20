@@ -5,3 +5,4 @@ conditional-get
 datasette-leaflet-geojson>=0.5
 datasette-graphql
 datasette-copyable
+datasette-leaflet-freedraw

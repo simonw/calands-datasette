@@ -6,4 +6,5 @@ datasette publish cloudrun calands.db \
   --install datasette-leaflet-geojson>=0.6 \
   --install datasette-graphql>=0.15 \
   --install datasette-copyable \
+  --install datasette-leaflet-freedraw \
   --extra-options "--config default_page_size:20"
