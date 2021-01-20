@@ -7,4 +7,5 @@ datasette publish cloudrun calands.db \
   --install datasette-graphql>=0.15 \
   --install datasette-copyable \
   --install datasette-leaflet-freedraw \
+  --branch 0.54a0 \
   --extra-options "--config default_page_size:20"
