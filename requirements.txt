@@ -1,8 +1,7 @@
-sqlite-utils>=2.16
 shapefile-to-sqlite>=0.4.1
 datasette
 conditional-get
-datasette-leaflet-geojson>=0.5
+datasette-leaflet-geojson>=0.7
 datasette-graphql
 datasette-copyable
 datasette-leaflet-freedraw
