@@ -4,6 +4,8 @@ This repository publishes a Datasette at https://calands.datasettes.com/ using t
 
 The site is built and published by [this GitHub Actions workflow](https://github.com/simonw/calands-datasette/blob/main/.github/workflows/build-and-deploy.yml).
 
+See also [Drawing shapes on a map to query a SpatiaLite database](https://simonwillison.net/2021/Jan/24/drawing-shapes-spatialite/).
+
 ## Technology used
 
 - [Datasette](https://datasette.io/)
