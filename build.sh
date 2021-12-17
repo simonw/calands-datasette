@@ -66,15 +66,13 @@ from
 order by
   id'
 
-SPATIALITE=$(python -c 'print(__import__("sqlite_utils").utils.find_spatialite())')
-
 # Create those as materialized views for better facet performance
 sqlite-utils calands.db \
   'create table superunits_with_maps as select * from superunits_with_maps_view' \
-  --load-extension=$SPATIALITE
+  --load-extension spatialite
 sqlite-utils calands.db \
   'create table units_with_maps as select * from units_with_maps_view' \
-  --load-extension=$SPATIALITE
+  --load-extension spatialite
 
 # Configure foreign keys for the materialized tables
 sqlite-utils add-foreign-key calands.db units_with_maps ACCESS_TYP
