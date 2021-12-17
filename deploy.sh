@@ -3,8 +3,9 @@ datasette publish cloudrun calands.db \
   --service calands \
   --metadata metadata.yml \
   --memory 2Gi \
+  --branch main \
   --install datasette-leaflet-geojson>=0.7 \
   --install datasette-graphql>=0.15 \
   --install datasette-copyable \
-  --install datasette-leaflet-freedraw>=0.2.1 \
+  --install https://github.com/simonw/datasette-leaflet-freedraw/archive/f4b25e12d62993a1dd665086681ee62832b64a18.zip \
   --extra-options "--setting sql_time_limit_ms 3500 --setting default_page_size 20"
