@@ -8,4 +8,5 @@ datasette publish cloudrun calands.db \
   --install datasette-graphql>=0.15 \
   --install datasette-copyable \
   --install datasette-leaflet-freedraw \
-  --extra-options "--setting sql_time_limit_ms 3500 --setting default_page_size 20"
+  --install datasette-geojson \
+  --extra-options "--setting sql_time_limit_ms 3500 --setting default_page_size 20 --setting trace_debug 1"
