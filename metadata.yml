@@ -17,7 +17,7 @@ allow_sql:
 databases:
     calands:
         queries:
-            draw_to_find_parks:
+            draw_to_find:
                 select
                     AsGeoJSON(geometry), *
                 from
