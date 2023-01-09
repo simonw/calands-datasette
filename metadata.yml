@@ -17,7 +17,7 @@ allow_sql:
 databases:
     calands:
         queries:
-            draw_to_find:
+            draw_to_find: |-
                 select
                     AsGeoJSON(geometry), *
                 from
@@ -33,7 +33,8 @@ databases:
                             f_table_name = 'CPAD_2020a_SuperUnits'
                             and search_frame = GeomFromGeoJSON(:freedraw)
                     )
-            draw_to_find_mini_parks:
+                limit 10
+            draw_to_find_mini_parks: |-
                 select
                     AsGeoJSON(geometry), *
                 from
@@ -50,6 +51,7 @@ databases:
                             f_table_name = 'CPAD_2020a_SuperUnits'
                             and search_frame = GeomFromGeoJSON(:freedraw)
                     )
+                limit 10
         tables:
             superunits_with_maps:
                 fts_table: CPAD_2020a_SuperUnits_fts
