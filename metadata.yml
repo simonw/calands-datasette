@@ -12,8 +12,44 @@ description_html: |-
         <input name="_search" type="search" placeholder="Search parks"> <input type="submit" value="Search">
     </p>
     </form>
+allow_sql:
+  id: simon
 databases:
     calands:
+        queries:
+            draw_to_find_parks:
+                select
+                    AsGeoJSON(geometry), *
+                from
+                    CPAD_2020a_SuperUnits
+                where
+                    Intersects(GeomFromGeoJSON(:freedraw), geometry) = 1
+                    and CPAD_2020a_SuperUnits.rowid in (
+                        select
+                            rowid
+                        from
+                            SpatialIndex
+                        where
+                            f_table_name = 'CPAD_2020a_SuperUnits'
+                            and search_frame = GeomFromGeoJSON(:freedraw)
+                    )
+            draw_to_find_mini_parks:
+                select
+                    AsGeoJSON(geometry), *
+                from
+                    CPAD_2020a_SuperUnits
+                where
+                    PARK_NAME like '%mini%' and
+                    Intersects(GeomFromGeoJSON(:freedraw), geometry) = 1
+                    and CPAD_2020a_SuperUnits.rowid in (
+                        select
+                            rowid
+                        from
+                            SpatialIndex
+                        where
+                            f_table_name = 'CPAD_2020a_SuperUnits'
+                            and search_frame = GeomFromGeoJSON(:freedraw)
+                    )
         tables:
             superunits_with_maps:
                 fts_table: CPAD_2020a_SuperUnits_fts
